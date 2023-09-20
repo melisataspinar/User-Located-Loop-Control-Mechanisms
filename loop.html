@@ -1,0 +1,47 @@
+console.log( "1. UNCONDITIONAL / UNCONDITIONAL\n" );
+for( i = 1; i < 5; i++ ) 
+{
+    console.log( "i = " + i );
+	if( i > 2 ) 
+		break;
+}
+
+console.log( "\n2. LABELED / UNLABELED" );
+iloop:
+for( i = 1; i < 5; i++ ) 
+{
+    console.log( "\ni = " + i );
+    jloop:
+    for( j = 1; j < 5; j++ ) 
+    {
+	     process.stdout.write( "j = " + j + ", " );
+		if( j > 2 ) 
+			break jloop;
+	}
+}
+
+console.log( "\n*********" );
+iloop:
+for( i = 1; i < 5; i++ ) 
+{
+    console.log( "\ni = " + i );
+    jloop:
+    for( j = 1; j < 5; j++ ) 
+    {
+	     process.stdout.write( "j = " + j + ", " );
+		if( j > 2 ) 
+			break iloop;
+	}
+}
+
+console.log( "\n*********" );
+for( i = 1; i < 5; i++ ) 
+{
+    console.log( "\ni = " + i );
+    for( j = 1; j < 5; j++ ) 
+    {
+	     process.stdout.write( "j = " + j + ", " );
+		if( j > 2 ) 
+			break;
+	}
+}
